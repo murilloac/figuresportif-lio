@@ -21,17 +21,11 @@ export default function Header() {
       <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 24px', height: 64, display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
         {/* Logo */}
         <NavLink to="/" style={{ display: 'flex', alignItems: 'center', gap: 10, textDecoration: 'none' }}>
-          <div style={{
-            width: 36, height: 36, borderRadius: 6,
-            background: 'linear-gradient(135deg, #7c3aed, #2563eb)',
-            display: 'flex', alignItems: 'center', justifyContent: 'center',
-            boxShadow: '0 0 12px rgba(124,58,237,0.6)',
-          }}>
-            <span style={{ color: 'white', fontFamily: 'Orbitron', fontWeight: 900, fontSize: 16 }}>P</span>
-          </div>
-          <span style={{ fontFamily: 'Orbitron', fontWeight: 700, fontSize: 15, color: '#e2e8f0', letterSpacing: 2 }}>
-            PRISMA <span style={{ color: '#a855f7' }}>FIGURES</span>
-          </span>
+          <img
+            src={`${import.meta.env.BASE_URL}logo.png`}
+            alt="Prisma Figures"
+            style={{ height: 44, width: 'auto', objectFit: 'contain' }}
+          />
         </NavLink>
 
         {/* Desktop nav */}

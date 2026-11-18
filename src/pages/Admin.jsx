@@ -101,7 +101,7 @@ export default function Admin() {
       {/* Top bar */}
       <div style={{ background: 'rgba(17,17,24,0.95)', borderBottom: '1px solid rgba(168,85,247,0.2)', padding: '0 24px', height: 60, display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
         <div style={{ fontFamily: 'Orbitron', fontWeight: 700, fontSize: 14, letterSpacing: 2 }}>
-          PRISMA <span style={{ color: '#a855f7' }}>ADMIN</span>
+          <img src={`${import.meta.env.BASE_URL}logo.png`} alt="Prisma Figures" style={{ height: 36, width: 'auto', objectFit: 'contain' }} />
         </div>
         <div style={{ display: 'flex', gap: 12, alignItems: 'center' }}>
           <a href="/" style={{ color: '#64748b', fontSize: 12, textDecoration: 'none' }}>← Ver site</a>
@@ -133,7 +133,7 @@ export default function Admin() {
                   <div style={{ position: 'relative' }}>
                     <img src={item.imageUrl} alt={item.name} style={{ width: '100%', height: 180, objectFit: 'cover', display: 'block' }} />
                     <div style={{ position: 'absolute', top: 8, right: 8, display: 'flex', gap: 4 }}>
-                      {item.featured && <span style={{ background: 'linear-gradient(135deg,#7c3aed,#2563eb)', borderRadius: 4, padding: '2px 6px', fontSize: 9, fontFamily: 'Orbitron', color: 'white' }}>★</span>}
+                      {item.featured && <span style={{ background: 'linear-gradient(135deg,#a80aee,#0eb8f1)', borderRadius: 4, padding: '2px 6px', fontSize: 9, fontFamily: 'Orbitron', color: 'white' }}>★</span>}
                       <span style={{ background: item.published ? 'rgba(34,197,94,0.2)' : 'rgba(239,68,68,0.2)', border: `1px solid ${item.published ? '#22c55e' : '#ef4444'}44`, borderRadius: 4, padding: '2px 6px', fontSize: 9, color: item.published ? '#22c55e' : '#ef4444' }}>
                         {item.published ? 'PUB' : 'OCU'}
                       </span>
@@ -143,7 +143,7 @@ export default function Admin() {
                     <div style={{ fontFamily: 'Orbitron', fontSize: 12, fontWeight: 700, color: '#e2e8f0', marginBottom: 2 }}>{item.name}</div>
                     <div style={{ fontSize: 11, color: '#a855f7', marginBottom: 12 }}>{item.category}</div>
                     <div style={{ display: 'flex', gap: 6 }}>
-                      <button onClick={() => handleEdit(item)} style={{ flex: 1, background: 'rgba(168,85,247,0.15)', border: '1px solid rgba(168,85,247,0.3)', color: '#a855f7', borderRadius: 5, padding: '6px 0', fontSize: 11, cursor: 'pointer', fontFamily: 'Orbitron' }}>EDITAR</button>
+                      <button onClick={() => handleEdit(item)} style={{ flex: 1, background: 'rgba(168,10,238,0.15)', border: '1px solid rgba(168,10,238,0.3)', color: '#a80aee', borderRadius: 5, padding: '6px 0', fontSize: 11, cursor: 'pointer', fontFamily: 'Orbitron' }}>EDITAR</button>
                       <button onClick={() => togglePublish(item)} style={{ flex: 1, background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', color: '#64748b', borderRadius: 5, padding: '6px 0', fontSize: 11, cursor: 'pointer', fontFamily: 'Orbitron' }}>{item.published ? 'OCULTAR' : 'PUBLICAR'}</button>
                       <button onClick={() => handleDelete(item)} style={{ background: 'rgba(239,68,68,0.1)', border: '1px solid rgba(239,68,68,0.3)', color: '#ef4444', borderRadius: 5, padding: '6px 10px', fontSize: 11, cursor: 'pointer' }}>✕</button>
                     </div>

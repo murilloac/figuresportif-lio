@@ -35,9 +35,11 @@ export default function Login() {
     <div className="paint-bg" style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 24 }}>
       <div className="neon-border" style={{ background: 'rgba(17,17,24,0.95)', borderRadius: 16, padding: '48px 40px', width: '100%', maxWidth: 400 }}>
         <div style={{ textAlign: 'center', marginBottom: 32 }}>
-          <div style={{ fontFamily: 'Orbitron', fontWeight: 900, fontSize: 20, color: '#e2e8f0', letterSpacing: 3, marginBottom: 4 }}>
-            PRISMA <span style={{ color: '#a855f7' }}>FIGURES</span>
-          </div>
+          <img
+            src={`${import.meta.env.BASE_URL}logo.png`}
+            alt="Prisma Figures"
+            style={{ height: 72, width: 'auto', objectFit: 'contain', marginBottom: 12 }}
+          />
           <div style={{ color: '#475569', fontSize: 13 }}>Painel Administrativo</div>
         </div>
 

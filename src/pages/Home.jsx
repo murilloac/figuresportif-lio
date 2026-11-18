@@ -46,7 +46,7 @@ function Hero() {
             width: Math.random() * 4 + 1,
             height: Math.random() * 4 + 1,
             borderRadius: '50%',
-            background: ['#a855f7', '#3b82f6', '#06b6d4', '#ec4899'][i % 4],
+            background: ['#a80aee', '#0eb8f1', '#ff2710', '#e3b812'][i % 4],
             opacity: Math.random() * 0.4 + 0.1,
             left: `${Math.random() * 100}%`,
             top: `${Math.random() * 100}%`,
@@ -55,7 +55,7 @@ function Hero() {
       </div>
 
       <div style={{ maxWidth: 800, textAlign: 'center', position: 'relative', zIndex: 1 }}>
-        <div style={{ display: 'inline-block', padding: '4px 16px', borderRadius: 20, border: '1px solid rgba(168,85,247,0.4)', marginBottom: 24, fontSize: 11, letterSpacing: 3, color: '#a855f7', fontFamily: 'Orbitron', textTransform: 'uppercase' }}>
+        <div style={{ display: 'inline-block', padding: '4px 16px', borderRadius: 20, border: '1px solid rgba(168,10,238,0.4)', marginBottom: 24, fontSize: 11, letterSpacing: 3, color: '#a80aee', fontFamily: 'Orbitron', textTransform: 'uppercase' }}>
           Impressão 3D · Pintura Artesanal · Aerografia
         </div>
 
@@ -105,7 +105,7 @@ function AboutTeaser() {
           A Prisma Figures nasceu da paixão pelo universo geek, pela escultura e pela arte de transformar personagens em peças colecionáveis.
           Cada projeto envolve criatividade, impressão 3D, preparação e pintura artesanal, com atenção especial aos detalhes, cores, texturas e efeitos que dão vida a cada escultura.
         </p>
-        <Link to="/sobre" style={{ display: 'inline-block', marginTop: 24, color: '#a855f7', fontFamily: 'Orbitron', fontSize: 12, letterSpacing: 2, textDecoration: 'none', borderBottom: '1px solid rgba(168,85,247,0.4)', paddingBottom: 2 }}>
+        <Link to="/sobre" style={{ display: 'inline-block', marginTop: 24, color: '#a80aee', fontFamily: 'Orbitron', fontSize: 12, letterSpacing: 2, textDecoration: 'none', borderBottom: '1px solid rgba(168,10,238,0.4)', paddingBottom: 2 }}>
           SAIBA MAIS →
         </Link>
       </div>
@@ -132,9 +132,9 @@ function ContactTeaser() {
 export function SectionTitle({ label, title }) {
   return (
     <div style={{ textAlign: 'center', marginBottom: 48 }}>
-      <div style={{ fontSize: 11, letterSpacing: 3, color: '#a855f7', fontFamily: 'Orbitron', marginBottom: 8 }}>{label}</div>
+      <div style={{ fontSize: 11, letterSpacing: 3, color: '#a80aee', fontFamily: 'Orbitron', marginBottom: 8 }}>{label}</div>
       <h2 style={{ fontFamily: 'Orbitron', fontWeight: 900, fontSize: 'clamp(20px, 4vw, 36px)', color: '#e2e8f0', margin: 0 }}>{title}</h2>
-      <div style={{ width: 60, height: 2, background: 'linear-gradient(90deg, #7c3aed, #2563eb)', margin: '16px auto 0', borderRadius: 1 }} />
+      <div style={{ width: 60, height: 2, background: 'linear-gradient(90deg, #a80aee, #0eb8f1, #e3b812, #ff2710)', margin: '16px auto 0', borderRadius: 1 }} />
     </div>
   )
 }

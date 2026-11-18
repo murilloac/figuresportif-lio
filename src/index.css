@@ -1,11 +1,10 @@
 @import "tailwindcss";
 
 :root {
-  --neon-purple: #a855f7;
-  --neon-blue: #3b82f6;
-  --neon-cyan: #06b6d4;
-  --neon-magenta: #ec4899;
-  --neon-red: #ef4444;
+  --neon-purple: #a80aee;
+  --neon-blue: #0eb8f1;
+  --neon-red: #ff2710;
+  --neon-gold: #e3b812;
   --bg-dark: #0a0a0f;
   --bg-card: #111118;
   --bg-surface: #16161f;
@@ -24,7 +23,7 @@ body {
 /* Scrollbar */
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: var(--bg-dark); }
-::-webkit-scrollbar-thumb { background: var(--neon-purple); border-radius: 3px; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #a80aee, #0eb8f1); border-radius: 3px; }
 
 /* Neon text */
 .neon-text {
@@ -37,9 +36,10 @@ body {
 /* Paint splatter SVG background */
 .paint-bg {
   background-image:
-    radial-gradient(ellipse at 20% 50%, rgba(168, 85, 247, 0.08) 0%, transparent 50%),
-    radial-gradient(ellipse at 80% 20%, rgba(6, 182, 212, 0.06) 0%, transparent 40%),
-    radial-gradient(ellipse at 60% 80%, rgba(236, 72, 153, 0.05) 0%, transparent 40%);
+    radial-gradient(ellipse at 20% 50%, rgba(168, 10, 238, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(14, 184, 241, 0.06) 0%, transparent 40%),
+    radial-gradient(ellipse at 60% 80%, rgba(255, 39, 16, 0.05) 0%, transparent 40%),
+    radial-gradient(ellipse at 40% 10%, rgba(227, 184, 18, 0.04) 0%, transparent 40%);
 }
 
 /* Masonry grid */
@@ -62,12 +62,12 @@ body {
   border-radius: 8px;
   cursor: pointer;
   background: var(--bg-card);
-  border: 1px solid rgba(168, 85, 247, 0.1);
+  border: 1px solid rgba(168, 10, 238, 0.15);
   transition: transform 0.3s ease, border-color 0.3s ease;
 }
 .gallery-card:hover {
   transform: scale(1.02);
-  border-color: rgba(168, 85, 247, 0.4);
+  border-color: rgba(168, 10, 238, 0.5);
   z-index: 2;
 }
 .gallery-card:hover img {
@@ -106,35 +106,23 @@ body {
 
 /* Neon border glow */
 .neon-border {
-  border: 1px solid rgba(168, 85, 247, 0.3);
-  box-shadow: 0 0 20px rgba(168, 85, 247, 0.1), inset 0 0 20px rgba(168, 85, 247, 0.03);
+  border: 1px solid rgba(168, 10, 238, 0.3);
+  box-shadow: 0 0 20px rgba(168, 10, 238, 0.08), inset 0 0 20px rgba(168, 10, 238, 0.02);
 }
 
-/* Hero gradient text */
+/* Prisma gradient text */
 .gradient-text {
-  background: linear-gradient(135deg, #a855f7 0%, #3b82f6 40%, #06b6d4 70%, #ec4899 100%);
+  background: linear-gradient(135deg, #a80aee 0%, #0eb8f1 40%, #e3b812 70%, #ff2710 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-}
-
-/* Spray dots decoration */
-.spray-dots::before {
-  content: '';
-  position: absolute;
-  width: 200px;
-  height: 200px;
-  background: radial-gradient(circle, rgba(168,85,247,0.15) 1px, transparent 1px);
-  background-size: 12px 12px;
-  border-radius: 50%;
-  pointer-events: none;
 }
 
 /* Category filter button */
 .cat-btn {
   padding: 6px 16px;
   border-radius: 20px;
-  border: 1px solid rgba(168, 85, 247, 0.3);
+  border: 1px solid rgba(168, 10, 238, 0.3);
   background: transparent;
   color: #94a3b8;
   font-size: 13px;
@@ -143,16 +131,17 @@ body {
   font-family: 'Inter', sans-serif;
 }
 .cat-btn:hover, .cat-btn.active {
-  background: rgba(168, 85, 247, 0.2);
+  background: rgba(168, 10, 238, 0.2);
   border-color: var(--neon-purple);
   color: #e2e8f0;
+  box-shadow: 0 0 12px rgba(168, 10, 238, 0.3);
 }
 
 /* Admin form inputs */
 .admin-input {
   width: 100%;
   background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(168, 85, 247, 0.2);
+  border: 1px solid rgba(168, 10, 238, 0.2);
   border-radius: 6px;
   padding: 10px 14px;
   color: #e2e8f0;
@@ -163,6 +152,7 @@ body {
 }
 .admin-input:focus {
   border-color: var(--neon-purple);
+  box-shadow: 0 0 0 2px rgba(168, 10, 238, 0.15);
 }
 .admin-input option {
   background: #1a1a2e;
@@ -170,7 +160,7 @@ body {
 
 /* Btn primary */
 .btn-primary {
-  background: linear-gradient(135deg, #7c3aed, #2563eb);
+  background: linear-gradient(135deg, #a80aee, #0eb8f1);
   color: white;
   border: none;
   padding: 12px 28px;
@@ -185,7 +175,7 @@ body {
 }
 .btn-primary:hover {
   transform: translateY(-1px);
-  box-shadow: 0 4px 20px rgba(124, 58, 237, 0.5);
+  box-shadow: 0 4px 24px rgba(168, 10, 238, 0.5), 0 0 40px rgba(14, 184, 241, 0.2);
 }
 
 /* Animated underline for nav */
@@ -206,7 +196,7 @@ body {
   left: 0;
   width: 0;
   height: 1px;
-  background: var(--neon-purple);
+  background: linear-gradient(90deg, #a80aee, #0eb8f1);
   transition: width 0.3s;
 }
 .nav-link:hover, .nav-link.active {

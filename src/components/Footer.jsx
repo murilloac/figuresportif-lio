@@ -7,8 +7,12 @@ export default function Footer() {
       textAlign: 'center',
     }}>
       <div style={{ maxWidth: 1200, margin: '0 auto' }}>
-        <div style={{ fontFamily: 'Orbitron', fontWeight: 700, fontSize: 18, color: '#e2e8f0', marginBottom: 8, letterSpacing: 3 }}>
-          PRISMA <span style={{ color: '#a855f7' }}>FIGURES</span>
+        <div style={{ marginBottom: 20 }}>
+          <img
+            src={`${import.meta.env.BASE_URL}logo.png`}
+            alt="Prisma Figures"
+            style={{ height: 64, width: 'auto', objectFit: 'contain' }}
+          />
         </div>
         <p style={{ color: '#475569', fontSize: 13, marginBottom: 20 }}>
           Arte em cada detalhe. Personalidade em cada peça.

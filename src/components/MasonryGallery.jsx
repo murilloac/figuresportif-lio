@@ -130,7 +130,7 @@ function GalleryCard({ item, size, onClick }) {
       {item.featured && (
         <div style={{
           position: 'absolute', top: 10, right: 10,
-          background: 'linear-gradient(135deg, #7c3aed, #2563eb)',
+          background: 'linear-gradient(135deg, #a80aee, #0eb8f1)',
           borderRadius: 4, padding: '3px 8px',
           fontSize: 9, fontFamily: 'Orbitron', color: 'white', letterSpacing: 1,
         }}>★ DESTAQUE</div>
